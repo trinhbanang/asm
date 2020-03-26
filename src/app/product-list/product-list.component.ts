@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../Product';
-import { ProductService } from '../services/product.service';
+import { ProductService } from '../services/product.service'
 
 
 @Component({
@@ -18,8 +18,10 @@ export class ProductListComponent implements OnInit {
     this.getProducts();
   }
   getProducts(){
-    this.productService.getProducts().subscribe(response => this.products =
-    response, error => console.log(error));
+    this.productService.getProducts().subscribe(response =>
+    this.products = response,error => console.log(error)
+    );
   }
+
 
 }
